@@ -1,5 +1,4 @@
 % 端口扫描, rustscan
-@ env
 
 # 使用 rustscan 进行端口扫描
-rustscan -u 5000 -a <MACHINE_IP>
+rustscan -u 5000 -a $MACHINE_IP
