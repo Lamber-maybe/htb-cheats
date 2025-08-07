@@ -1,0 +1,9 @@
+% env
+
+$ DC_IP:    echo $DC_IP
+$ DOMAIN:   echo $DOMAIN
+$ USER:     echo $USER
+$ PASSWORD: echo $PASSWORD
+$ DC_HOST:  echo $DC_HOST
+$ NT_HASH:  echo $NT_HASH
+$ MACHINE_IP: echo $MACHINE_IP
