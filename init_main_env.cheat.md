@@ -4,7 +4,9 @@
 ```sh
 mkdir <main_name>
 cd <main_name>
-echo export MACHINE_IP=<machine_ip> > .envrc
+mkdir output
+echo export ATTACKER_IP=<attacker_ip> > .envrc
+echo export MACHINE_IP=<machine_ip>   >> .envrc
 echo export DOMAIN=       >> .envrc
 echo export DC_IP=        >> .envrc
 echo export DC_HOST=      >> .envrc
@@ -15,7 +17,9 @@ echo "username, ntlmhash" > user-hash.csv
 
 direnv allow .
 
-echo "环境初始化完毕，收集到新的信息时，请编辑 .envrc 文件"z
+echo "环境初始化完毕，收集到新的信息时，请编辑 .envrc 文件"
 echo "收集到新凭据时，使用 init, child 创建一个单独的工作目录"
 echo "当前目标: <machine_ip>"
 ```
+
+$ attacker_ip: ip -4 -o addr show tun0 2>/dev/null | awk '{print $4}' | cut -d/ -f1
