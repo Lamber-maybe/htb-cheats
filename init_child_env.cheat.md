@@ -3,9 +3,7 @@
 # 为凭据单独创建目录，初始化环境变量
 ```sh
 mkdir <child_name>
-echo export DOMAIN= >> <child_name>/.envrc
-echo export DC_IP= >> <child_name>/.envrc
-echo export DC_HOST= >> <child_name>/.envrc
+echo source_up >> <child_name>/.envrc
 echo export USER= >> <child_name>/.envrc
 echo export PASSWORD= >> <child_name>/.envrc
 
